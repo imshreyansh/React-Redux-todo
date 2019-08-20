@@ -15,9 +15,10 @@ class Todo extends Component {
         dispatch(addTodo(data, polo))
     }
 
-    onRemove = (obj) => {
+    onRemove = (id, val) => {
+        console.log('..................', id)
         const { dispatch } = this.props
-        dispatch(removeTodo(obj))
+        dispatch(removeTodo(id, val))
     }
     render() {
         return (
@@ -34,9 +35,10 @@ class Todo extends Component {
                 <div>
                     <ul className='ul'>
                         {this.props.resp.map(res => {
+
                             return (
 
-                                <li className='li'>{res.obj}<button className='bt' onClick={() => this.onRemove(res.obj)}>Remove</button></li>
+                                <li className='li'>{res[1]}<button className='bt' onClick={() => this.onRemove(res[0], res[1])}>Remove</button></li>
 
                             )
                         })}
@@ -49,9 +51,8 @@ class Todo extends Component {
 }
 
 function mapStateToProps({ addTodo }) {
-    const resp = Object.values(addTodo).map(res => res)
+    const resp = Object.entries(addTodo).map(res => res)
     const polo = addTodo
-
     return {
         resp,
         polo

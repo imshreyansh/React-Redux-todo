@@ -17,14 +17,12 @@ export function addTodo(val, data) {
     }
 }
 
-export function removeTodo(val) {
-    const obj = {
-        id: generateUID(),
-        item: val,
-    }
+export function removeTodo(id, val) {
+
     return {
         type: REMOVE_TODO,
-        obj,
+        id,
+
 
     }
 }
