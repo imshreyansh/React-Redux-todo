@@ -1,0 +1,67 @@
+.body{
+    background-size: 100vh
+}
+
+.comp{
+display: flex;
+align-items: center;
+flex-direction: column;
+margin-top: 10vh;
+}
+
+.form{
+
+max-width:500px;
+min-width: 200px;
+display: flex;
+justify-content: center;
+}
+
+.lab{
+margin-left: 20px;
+border: 2px solid blue;
+max-width:500px;
+min-width: 200px;
+border-radius: 20px;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-top: 5px;
+
+}
+
+.text{
+    font-size: 20px;
+    color:blue;
+    font-weight: bold;
+    
+}
+
+.buttonDiv{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    width:100px;
+    display: flex;
+    justify-content: center;
+    background-color: brown;
+    color: white
+}
+
+.li{
+    font-size: 20px;
+    color: blue
+}
+
+.bt{
+    width:80px;
+    background-color: green;
+    color: white;
+    margin-left: 20px;
+}
+
+.ul{
+margin-top:50px;
+}
