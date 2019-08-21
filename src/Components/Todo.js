@@ -16,7 +16,7 @@ class Todo extends Component {
     }
 
     onRemove = (id, val) => {
-        console.log('..................', id)
+
         const { dispatch } = this.props
         dispatch(removeTodo(id, val))
     }
@@ -34,11 +34,11 @@ class Todo extends Component {
                 </div>
                 <div>
                     <ul className='ul'>
-                        {this.props.resp.map(res => {
+                        {this.props.resp.map((res, index) => {
 
                             return (
 
-                                <li className='li'>{res[1]}<button className='bt' onClick={() => this.onRemove(res[0], res[1])}>Remove</button></li>
+                                <li key={index} className='li'>{res[1]}<button className='bt' onClick={() => this.onRemove(res[0], res[1])}>Remove</button></li>
 
                             )
                         })}

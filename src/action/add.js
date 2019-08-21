@@ -22,7 +22,7 @@ export function removeTodo(id, val) {
     return {
         type: REMOVE_TODO,
         id,
-
+        val
 
     }
 }

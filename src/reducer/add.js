@@ -21,13 +21,13 @@ export default function addTodo(state = [], action) {
 
 
         case REMOVE_TODO:
-            Object.entries(state).filter(id => id[0] !== action.id && id[1] !== action.val)
-            var val = action.val
+
+            const id = action.id
+            delete state[id]
             return {
                 ...state,
-                [action.id]: val
-
             }
+
         default:
             return {
                 ...state
